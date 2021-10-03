@@ -3,18 +3,23 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-
 """
     Actor-Critic implementations
     Paper: Actor-Critic Algorithms
-    Source: 
+    Source: https://github.com/llSourcell/actor_critic
 """
+
 
 # torch.backends.cudnn.enabled = False  # Non-deterministic algorithm
 
 class PGNetwork(nn.Module):
 
     def __init__(self, state_dim, action_dim):
+        """
+        Initialize PGNetwork.
+        :param state_dim: dimension of the state
+        :param action_dim: dimension of the action
+        """
         super(PGNetwork, self).__init__()
         self.fc1 = nn.Linear(state_dim, 20)
         self.fc2 = nn.Linear(20, action_dim)
@@ -31,7 +36,7 @@ class PGNetwork(nn.Module):
 
 
 class Actor(object):
-    # dqn Agent
+
     def __init__(self, state_dim, action_dim, device, LR):
         # Dimensions of state space and action space
         self.state_dim = state_dim
@@ -50,7 +55,7 @@ class Actor(object):
         observation = torch.FloatTensor(observation).to(self.device)
         network_output = self.network.forward(observation)
         with torch.no_grad():
-            #prob_weights = F.softmax(network_output, dim=0).cuda().data.cpu().numpy()
+            # prob_weights = F.softmax(network_output, dim=0).cuda().data.cpu().numpy()
             prob_weights = F.softmax(network_output, dim=0).data.cpu().numpy()
         # prob_weights = F.softmax(network_output, dim=0).detach().numpy()
         action = np.random.choice(range(prob_weights.shape[0]),
@@ -65,7 +70,8 @@ class Actor(object):
         neg_log_prob = F.cross_entropy(input=softmax_input, target=action, reduction='none')
 
         # Step 2: Backpropagation
-        # Here you need to maximize the value of the current strategy, so you need to maximize "neg_log_prob * tf_error", that is, minimize "-neg_log_prob * td_error"
+        # Here you need to maximize the value of the current strategy,
+        # so you need to maximize "neg_log_prob * tf_error", that is, minimize "-neg_log_prob * td_error"
         loss_a = -neg_log_prob * td_error
         self.optimizer.zero_grad()
         loss_a.backward()
@@ -105,12 +111,11 @@ class Critic(object):
         self.optimizer = torch.optim.Adam(self.network.parameters(), lr=self.LR)
         self.loss_func = nn.MSELoss()
 
-
     def train_Q_network(self, state, reward, next_state):
         s, s_ = torch.FloatTensor(state).to(self.device), torch.FloatTensor(next_state).to(self.device)
         # Forward propagation
-        v = self.network.forward(s)     # v(s)
-        v_ = self.network.forward(s_)   # v(s')
+        v = self.network.forward(s)  # v(s)
+        v_ = self.network.forward(s_)  # v(s')
 
         # Backpropagation
         loss_q = self.loss_func(reward + self.GAMMA * v_, v)
@@ -122,9 +127,3 @@ class Critic(object):
             td_error = reward + self.GAMMA * v_ - v
 
         return td_error
-
-
-
-
-
-
