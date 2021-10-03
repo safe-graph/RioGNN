@@ -5,7 +5,7 @@ Code for [**Enhancing Graph Neural Network-based Fraud Detectors against Camoufl
 [Hao Peng](https://penghao-buaa.github.io/), Ruitong Zhang, [Yingtong Dou](http://ytongdou.com/), Renyu Yang, Jingyi Zhang, [Philip S. Yu](https://www.cs.uic.edu/PSYu/).
 
 
-### Repo Structure
+## Repo Structure
 
 The repository is organized as follows:
 - `data/`: dataset folder
