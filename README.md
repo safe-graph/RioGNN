@@ -56,7 +56,7 @@ pip3 install -r requirements.txt
 ```bash
 python data_process.py
 ```
-###### 3. Run `train.py` to run CARE-GNN with default settings.
+###### 3. Run `train.py` to run RioGNN with default settings.
 ```bash
 python train.py
 ```
@@ -71,7 +71,8 @@ python train.py
 Note that the model will stop early when reinforcement learning has explored all depths.
 - The default value of parameter `--ALAPHA` is `10`, 
 which means that the accuracy of different depths of reinforcement learning tree will be progressive with 
-0.1, 0.01, 0.001, etc, if you want to conduct more width and depth experiments, please adjust here.
+0.1, 0.01, 0.001, etc. 
+If you want to conduct more width and depth experiments, please adjust here.
 
 \* For other dataset and parameter settings, please refer to the arg parser in `train.py`. 
 
