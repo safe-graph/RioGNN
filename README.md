@@ -1,6 +1,6 @@
 # RioGNN
 
-Code for [**Enhancing Graph Neural Network-based Fraud Detectors against Camouflaged Fraudsters**](https://arxiv.org/pdf/2104.07886.pdf).  
+Code for [**Reinforced Neighborhood Selection Guided Multi-Relational Graph Neural Networks**](https://arxiv.org/pdf/2104.07886.pdf).  
 
 [Hao Peng](https://penghao-buaa.github.io/), Ruitong Zhang, [Yingtong Dou](http://ytongdou.com/), Renyu Yang, Jingyi Zhang, [Philip S. Yu](https://www.cs.uic.edu/PSYu/).
 
