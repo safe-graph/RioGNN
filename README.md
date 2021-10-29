@@ -11,7 +11,7 @@ The repository is organized as follows:
 - `data/`: dataset folder
     - `YelpChi.mat`: Data of the dataset Yelp;
     - `Amazon.mat`: Data of the dataset Amazon;
-    - `Mimic.mat`: Data of the dataset Mimic;
+    - `Mimic.zip`: Data of the dataset Mimic;
 - `log/`: log folder
 - `model/`: model folder
     - `graphsage.py`: model code for vanilla [GraphSAGE](https://github.com/williamleif/graphsage-simple/) model;
