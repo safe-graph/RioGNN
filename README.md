@@ -93,7 +93,7 @@ If you use our code, please cite the paper below:
 @article{peng2021reinforced,
   title={Reinforced Neighborhood Selection Guided Multi-Relational Graph Neural Networks},
   author={Peng, Hao and Zhang, Ruitong and Dou, Yingtong and Yang, Renyu and Zhang, Jingyi and Yu, Philip S.},
-  journal={arXiv preprint arXiv:2104.07886},
+  journal={ACM Transactions on Information Systems (TOIS)},
   year={2021}
 }
 ```
