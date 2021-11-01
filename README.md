@@ -56,17 +56,18 @@ Or, you can also clone other files first by command, and then download the datas
 ```bash
 git clone git@github.com:safe-graph/RioGNN.git
 ```
-https://drive.google.com/XXXXX
+https://drive.google.com/XXXXX 
+
 Note that all datasets need to be unzipped in the folder `\data` first;
-###### 2. Install the required packages using the `requirements.txt`;
+##### 2. Install the required packages using the `requirements.txt`;
 ```bash
 pip3 install -r requirements.txt
 ```
-###### 3. Run `data_process.py` to generate adjacency lists of different dataset used by RioGNN;
+##### 3. Run `data_process.py` to generate adjacency lists of different dataset used by RioGNN;
 ```bash
 python data_process.py
 ```
-###### 4. Run `train.py` to run RioGNN with default settings.
+##### 4. Run `train.py` to run RioGNN with default settings.
 ```bash
 python train.py
 ```
