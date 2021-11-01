@@ -52,11 +52,12 @@ You can download the project and and run the program as follows:
 ```bash
 git lfs clone git@github.com:safe-graph/RioGNN.git
 ```
-Or, you can also clone other files first by command, and then download the dataset `Mimic.zip` (734.5MB) via the link below;
+Or, you can also clone other files first by command `git clone`, and then download the dataset `Mimic.zip` (734.5MB) via one of the links below;
 ```bash
 git clone git@github.com:safe-graph/RioGNN.git
 ```
-https://drive.google.com/file/d/1bPweW0AVWcQ_-2Aky3ASBROaH_QC2hcw/view?usp=sharing
+Google Drive: https://drive.google.com/file/XXX
+Baidu Cloud: https://cloud.baidu.com/
 
 \* Note that all datasets need to be unzipped in the folder `\data` first;
 ###### 2. Install the required packages using the `requirements.txt`;
