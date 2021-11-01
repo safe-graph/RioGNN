@@ -56,7 +56,7 @@ Or, you can also clone other files first by command, and then download the datas
 ```bash
 git clone git@github.com:safe-graph/RioGNN.git
 ```
-https://drive.google.com/XXXXX 
+https://drive.google.com/file/d/1bPweW0AVWcQ_-2Aky3ASBROaH_QC2hcw/view?usp=sharing
 
 \* Note that all datasets need to be unzipped in the folder `\data` first;
 ###### 2. Install the required packages using the `requirements.txt`;
