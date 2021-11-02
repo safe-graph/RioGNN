@@ -48,17 +48,11 @@ To run RioGNN on your datasets, you need to prepare the following data:
 ## How to Run
 You can download the project and and run the program as follows:
 
-###### 1. The dataset folder `\data` ontains LFS file `Mimic.zip`, please use the explicit command `git lfs clone`;
-```bash
-git lfs clone git@github.com:safe-graph/RioGNN.git
-```
-Or, you can also clone other files first by command `git clone`, and then download the dataset `Mimic.zip` (734.5MB) via one of the links below;
-```bash
-git clone git@github.com:safe-graph/RioGNN.git
-```
-Google Drive: https://drive.google.com/file/XXX
+###### 1. The dataset folder `\data` only contains two Fraud datasets, please use the following links to download the Mimic dataset (~700MB);
 
-Baidu Cloud: https://cloud.baidu.com/
+Google Drive: https://drive.google.com/file/d/1WvYtNSHcvSQr8fzI9ykpgjMBSPwCTW0h/view?usp=sharing
+
+Baidu Cloud: https://pan.baidu.com/s/1iyaOqnkyYGqo1Mdwt4QYnQ Password: `vbwn`
 
 \* Note that all datasets need to be unzipped in the folder `\data` first;
 ###### 2. Install the required packages using the `requirements.txt`;
